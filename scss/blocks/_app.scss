@@ -1,0 +1,68 @@
+.app {
+  @include section(60px, 90px);
+  overflow: hidden;
+}
+
+.app__inner {
+  @include flex(row, space-between, center, 60px);
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.app__media {
+  flex-shrink: 0;
+  width: 46%;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.app__img {
+  margin: 0 auto;
+}
+
+.app__content {
+  width: 48%;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.app__title {
+  margin-bottom: 40px;
+}
+
+.app__list {
+  @include flex(column, flex-start, stretch, 10px);
+}
+
+.app__item {
+  @include flex(row, flex-start, flex-start, 22px);
+  padding: 22px;
+  border-radius: $radius-md;
+  transition: box-shadow 0.3s ease;
+
+  &--card {
+    background-color: $color-white;
+    box-shadow: $shadow-card;
+  }
+}
+
+.app__icon {
+  @include size(46px);
+  flex-shrink: 0;
+  border-radius: $radius-sm;
+}
+
+.app__item-title {
+  margin-bottom: 6px;
+  @include font(16px, $fw-bold, 1.4, $color-heading);
+}
+
+.app__text {
+  @include font(14px, $fw-regular, 1.85, $color-text);
+}

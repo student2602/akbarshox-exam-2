@@ -1,0 +1,58 @@
+.header {
+  position: relative;
+  z-index: 3;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  &::after {
+    @include pseudo(100%, 1px);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($color-white, 0.08);
+  }
+}
+
+.header__inner {
+  @include flex(row, space-between, center, 30px);
+}
+
+.header__nav {
+  margin-left: auto;
+  margin-right: 40px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.header__list {
+  @include flex(row, flex-start, center, 36px);
+}
+
+.header__link {
+  position: relative;
+  @include font(14px, $fw-regular, 1.4, rgba($color-white, 0.85));
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: $color-white;
+  }
+
+  &--drop {
+    padding-right: 16px;
+
+    &::before {
+      @include pseudo(6px, 6px);
+      top: 40%;
+      right: 0;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+}
+
+.header__action {
+  @include flex(row, flex-end, center, 0);
+}

@@ -1,0 +1,83 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: $gradient-hero;
+}
+
+.hero__decor {
+  position: absolute;
+  top: 82px;
+  right: 0;
+  bottom: 0;
+  width: 46%;
+  overflow: hidden;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.hero__img {
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.intro {
+  @include section(90px, 150px);
+  z-index: 2;
+
+  &::before {
+    @include pseudo(760px, 760px);
+    top: -180px;
+    left: -320px;
+    background-color: rgba($color-white, 0.04);
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include pseudo(260px, 200px);
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+}
+
+.intro__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+}
+
+.intro__title {
+  margin-bottom: 26px;
+  color: $color-white;
+}
+
+.intro__text {
+  max-width: 440px;
+  margin-bottom: 38px;
+  @include font(15px, $fw-light, 2, rgba($color-white, 0.8));
+}
+
+.intro__actions {
+  @include flex(row, flex-start, center, 26px);
+  margin-bottom: 48px;
+}
+
+.intro__sponsors {
+  @include flex(row, flex-start, center, 22px);
+}
+
+.intro__sponsors-label {
+  @include font(13px, $fw-regular, 1.5, rgba($color-white, 0.65));
+}
+
+.intro__sponsors-img {
+  height: 24px;
+  width: auto;
+}

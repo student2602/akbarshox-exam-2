@@ -1,0 +1,62 @@
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-blue-dark: #1f3f74;
+$color-blue: #2b4f8e;
+$color-blue-light: #3a63ab;
+$color-blue-soft: #eef3fb;
+
+$color-heading: #16243c;
+$color-text: #6c6d71;
+$color-muted: #9aa3b2;
+
+$color-green: #2fcc8b;
+$color-green-dark: #27ae60;
+$color-pink: #f35c7a;
+$color-pink-soft: #fdeef1;
+$color-yellow: #ffc542;
+$color-orange: #f5a623;
+$color-purple: #6d5bd0;
+
+$color-border: #e7ebf1;
+$color-bg-light: #f8fafd;
+
+//Gradients
+$gradient-hero: linear-gradient(135deg, #24437c 0%, #2a4a85 45%, #2f5292 100%);
+$gradient-works: linear-gradient(120deg, #1f3f74 0%, #2b4f8e 55%, #345ba0 100%);
+$gradient-pricing: linear-gradient(120deg, #1e3e73 0%, #2b4f8e 50%, #2f5292 100%);
+$gradient-payment: linear-gradient(135deg, #f4f9fd 0%, #f8fbfd 55%, #fdfdfd 100%);
+$gradient-badge: linear-gradient(90deg, #f7a53b 0%, #f5872a 100%);
+$gradient-price-text: linear-gradient(90deg, #2fcc8b 0%, #27ae60 100%);
+
+//Typography
+$font-main: "Poppins", "Segoe UI", Arial, sans-serif;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-base: 15px;
+$fs-small: 13px;
+$fs-eyebrow: 12px;
+$fs-h1: 56px;
+$fs-h2: 36px;
+$fs-h3: 18px;
+
+//Layout
+$container-width: 1170px;
+$container-gap: 15px;
+
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-lg: 24px;
+$radius-pill: 50px;
+
+$shadow-card: 0 18px 45px rgba(#16243c, 0.08);
+$shadow-soft: 0 10px 30px rgba(#16243c, 0.06);
+
+//Breakpoints
+$bp-desktop: 1200px;
+$bp-tablet: 992px;
+$bp-mobile: 576px;

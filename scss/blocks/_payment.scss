@@ -1,0 +1,60 @@
+.payment {
+  position: relative;
+  margin-top: 40px;
+  background: $gradient-payment;
+  overflow: hidden;
+
+  &::before {
+    @include pseudo(520px, 520px);
+    top: -140px;
+    left: -180px;
+    background: radial-gradient(circle, rgba(#cfe0f5, 0.55) 0%, rgba(#ffffff, 0) 70%);
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include pseudo(320px, 320px);
+    right: -120px;
+    bottom: -140px;
+    background: radial-gradient(circle, rgba(#ffe6a8, 0.35) 0%, rgba(#ffffff, 0) 70%);
+    border-radius: 50%;
+  }
+}
+
+.payment__inner {
+  @include flex(row, space-between, center, 60px);
+  position: relative;
+  z-index: 2;
+
+  @include tablet {
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+}
+
+.payment__media {
+  width: 46%;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.payment__img {
+  margin-left: -15px;
+}
+
+.payment__content {
+  width: 48%;
+  padding: 60px 0;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.payment__text {
+  margin: 26px 0 38px;
+  max-width: 420px;
+  @include font(15px, $fw-regular, 2, $color-text);
+}

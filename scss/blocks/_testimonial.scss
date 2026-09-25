@@ -1,0 +1,90 @@
+.testimonial {
+  @include section(100px, 60px);
+  overflow: hidden;
+}
+
+.testimonial__list {
+  @include grid(repeat(4, 1fr), 26px);
+  margin-bottom: 40px;
+}
+
+.testimonial__item {
+  padding: 32px 30px;
+  background-color: $color-white;
+  border-radius: 4px;
+  box-shadow: $shadow-soft;
+
+  &:nth-child(n + 4) {
+    opacity: 0.45;
+  }
+
+  @include tablet {
+    &:nth-child(n + 3) {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    &:nth-child(n + 2) {
+      display: none;
+    }
+  }
+}
+
+.testimonial__stars {
+  @include flex(row, flex-start, center, 3px);
+  margin-bottom: 18px;
+}
+
+.testimonial__star {
+  @include size(13px);
+  fill: $color-yellow;
+
+  &--off {
+    fill: #e2e6ec;
+  }
+}
+
+.testimonial__title {
+  margin-bottom: 18px;
+  @include font(15px, $fw-bold, 1.5, $color-heading);
+}
+
+.testimonial__text {
+  margin-bottom: 26px;
+  @include font(14px, $fw-regular, 1.85, $color-text);
+}
+
+.testimonial__author {
+  @include flex(row, flex-start, center, 14px);
+}
+
+.testimonial__avatar {
+  @include circle(42px, transparent);
+  object-fit: cover;
+}
+
+.testimonial__name {
+  @include font(14px, $fw-bold, 1.4, $color-heading);
+}
+
+.testimonial__nick {
+  @include font(13px, $fw-regular, 1.4, $color-blue-light);
+}
+
+.testimonial__nav {
+  @include flex(row, center, center, 26px);
+}
+
+.testimonial__arrow {
+  @include font(22px, $fw-regular, 1, $color-muted);
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: $color-heading;
+  }
+
+  &--active {
+    color: $color-heading;
+  }
+}

@@ -1,0 +1,44 @@
+.button {
+  @include button($color-blue-dark);
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  &--light {
+    @include button($color-white, $color-blue-dark);
+  }
+
+  &--outline {
+    @include button(transparent, $color-white, $color-white);
+  }
+
+  &--video {
+    @include flex(row, flex-start, center, 10px);
+    padding: 14px 0;
+    background: none;
+    border: none;
+    color: $color-white;
+  }
+
+  &--small {
+    padding: 12px 34px;
+    font-size: 13px;
+  }
+}
+
+.button__icon {
+  @include circle(22px, $color-white);
+  position: relative;
+
+  &::before {
+    @include pseudo(0, 0);
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid $color-blue-dark;
+  }
+}

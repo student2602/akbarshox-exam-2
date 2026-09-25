@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 55px;
+  padding-bottom: 90px;
+  border-top: 1px solid $color-border;
+}
+
+.footer__inner {
+  @include grid(repeat(4, 1fr), 30px);
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer__title {
+  margin-bottom: 26px;
+  @include font(17px, $fw-bold, 1.4, $color-heading);
+}
+
+.footer__list {
+  @include flex(column, flex-start, flex-start, 12px);
+}
+
+.footer__link {
+  @include font(14px, $fw-regular, 1.5, $color-text);
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
