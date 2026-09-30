@@ -1,0 +1,30 @@
+.section{
+    &__img{
+        width: 600px;
+        margin-top: 45px;
+        margin-right: 79px;
+        margin-left: 86px;
+    }
+    &__item{
+        display: flex;
+        margin-top: 10px;
+        font-family: 'Rubik';
+        color: #4F5665;
+        margin-left: 79px;
+    }
+    &__wrapper{
+        display: flex;
+    }
+    &__title{
+        margin-top: 70px;
+        margin-left: 79px;
+        font-family: 'Rubik';
+        color: #0B132A;
+    }
+    &__text{
+        margin-top: 10px;
+        color: #4F5665;
+        font-family: 'Rubik';
+        margin-left: 79px;
+    }
+}

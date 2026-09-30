@@ -1,83 +1,114 @@
-.hero {
-  position: relative;
-  overflow: hidden;
-  background: $gradient-hero;
-}
-
-.hero__decor {
-  position: absolute;
-  top: 82px;
-  right: 0;
-  bottom: 0;
-  width: 46%;
-  overflow: hidden;
-
-  @include tablet {
-    display: none;
-  }
-}
-
-.hero__img {
-  width: auto;
-  height: 100%;
-  max-width: none;
-  object-fit: cover;
-  object-position: left top;
-}
-
-.intro {
-  @include section(90px, 150px);
-  z-index: 2;
-
-  &::before {
-    @include pseudo(760px, 760px);
-    top: -180px;
-    left: -320px;
-    background-color: rgba($color-white, 0.04);
-    border-radius: 50%;
-  }
-
-  &::after {
-    @include pseudo(260px, 200px);
-    right: 0;
-    bottom: -1px;
-    left: 0;
-    margin: 0 auto;
-    background-color: transparent;
-  }
-}
-
-.intro__inner {
-  position: relative;
-  z-index: 2;
-  max-width: 560px;
-}
-
-.intro__title {
-  margin-bottom: 26px;
-  color: $color-white;
-}
-
-.intro__text {
-  max-width: 440px;
-  margin-bottom: 38px;
-  @include font(15px, $fw-light, 2, rgba($color-white, 0.8));
-}
-
-.intro__actions {
-  @include flex(row, flex-start, center, 26px);
-  margin-bottom: 48px;
-}
-
-.intro__sponsors {
-  @include flex(row, flex-start, center, 22px);
-}
-
-.intro__sponsors-label {
-  @include font(13px, $fw-regular, 1.5, rgba($color-white, 0.65));
-}
-
-.intro__sponsors-img {
-  height: 24px;
-  width: auto;
+.intro{
+    &__title{
+        width: 555px;
+        font-family: 'Rubik';
+        font-weight: 500;
+        margin-top: 120px;
+        margin-left: 150px;
+        color: #0B132A;
+        margin-bottom: 20px;
+    }
+    &__text{
+        color: #4F5665;
+        width: 555px;
+        margin-left: 150px;
+        font-family: 'Rubik';
+        margin-bottom: 50px;
+        margin-right: 40px;
+    }
+    &__link{
+        background-color: #F53838;
+        color: #FFFFFF;
+        font-family: 'Rubik';
+        padding: 17px 77px 17px 77px;
+        border-radius: 10px;
+        margin-left: 150px;
+    }
+    &__img{
+        margin-bottom: 45px;
+    }
+    &__container{
+        margin-top: 101px;
+    }
+    &__item-first-element{
+        background-image: url(/img/person.png);
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 32px;
+        background-color: #FFECEC;
+        margin-left: 42px;
+        margin-top: 82px;
+        margin-left: 112px;
+    }
+    &__item-second-element{
+        background-image: url(/img/navigator.png);
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 32px;
+        background-color: #FFECEC;
+        margin-left: 53px;
+        margin-top: 82px;
+    }
+    &__item-thirt-element{
+        background-image: url(/img/book.png);
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 32px;
+        background-color: #FFECEC;
+        margin-left: 53px;
+        margin-top: 82px;
+    }
+    &__wrapper{
+        display: flex;
+    }
+    &__list{
+        margin-top: 48px;
+        display: flex;
+    }
+    &__item-wrapper{
+        justify-content: center;
+    }
+    &__item-text{
+        color: #4F5665;
+        font-family: 'Rubik';
+    }
+    &__item-number{
+        color: #0B132A;
+        font-family: 'Rubik';
+        font-weight: 700;
+    }
+    &__wrapper-second{
+        width: 1440px;
+        justify-content: center;
+        margin-top: 48px;
+    }
+    &__item-first{
+        display: flex;
+        margin-left: 197px;
+    }
+    &__item-second{
+        display: flex;
+        margin-left: 53px;
+    }
+    &__item-thirt{
+        display: flex;
+    }
+    &__item-wrapper{
+        margin-left: 17px;
+        margin-top: 79px;
+        margin-right: 63px;
+        margin-bottom: 31px;
+    }
 }
